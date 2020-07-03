@@ -1,0 +1,123 @@
+/* game board table */
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Indie+Flower&family=Montserrat+Alternates:ital,wght@1,600&display=swap');
+
+html {
+  width: auto;
+  height: auto;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(102,34,195,1) 38%, rgba(253,192,45,1) 94%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+	font-family: 'Holtwood One SC', serif;
+  color: gold;
+  margin: 0px;
+}
+
+h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  margin: 10px;
+}
+
+.img1 {
+  position: relative;
+  display: block;
+  width: 30%;
+  height: 30%;
+  left: -420px;
+  bottom: 400px;
+}
+
+.img2 {
+  position: relative;
+  display: block;
+  width: 30%;
+  height: 30%;
+  left: 420px;
+  bottom: 650px;
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* TODO: make into circles */
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border-style: dotted;
+  border-color: black;
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+.piece.p1 {
+  background-color: rgb(136, 3, 252);
+}
+
+.piece.p2 {
+  background-color: rgb(227, 209, 109);
+}
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
+
+button {
+	padding: 5px;
+	margin: 20px 0px 0px 0px;
+	font-family: 'Indie Flower', cursive;
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: gold;
+}
+
+.drop {
+    animation-name: drop-animation1;
+    animation-duration: 500ms;
+}
+
+.drop2 {
+    animation-name: drop-animation2;
+    animation-duration: 500ms;
+}
+
+@keyframes drop-animation1 {
+    from {
+        transform: translateY(-300px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes drop-animation2 {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
