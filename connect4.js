@@ -97,11 +97,6 @@ function placeInTable(y, x) {
   const position = document.getElementById(`${y}-${x}`);
 
   position.append(piece);
-  
-  let row5 = document.querySelector("table tr:nth-child(6)");
-  row5.addEventListener("click", function() {
-	  console.log("We Da Best Music!!");
-  })
 }
 
 /** endGame: announce game end */
@@ -111,6 +106,8 @@ function endGame(msg) {
   window.setTimeout(function() {
     alert(msg);
   }, 400);
+  let topRow = document.querySelector("table tr");
+  topRow.removeEventListener("click", handleClick);
 }
 
 restartBtn.addEventListener("click", function() {

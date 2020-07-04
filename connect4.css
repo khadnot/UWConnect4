@@ -95,27 +95,13 @@ button:hover {
 }
 
 .drop {
-    animation-name: drop-animation1;
+    animation-name: drop-animation;
     animation-duration: 500ms;
 }
 
-.drop2 {
-    animation-name: drop-animation2;
-    animation-duration: 500ms;
-}
-
-@keyframes drop-animation1 {
+@keyframes drop-animation {
     from {
         transform: translateY(-300px);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes drop-animation2 {
-    from {
-        transform: translateY(-200px);
     }
     to {
         transform: translateY(0);
